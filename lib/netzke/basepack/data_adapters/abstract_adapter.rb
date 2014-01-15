@@ -247,7 +247,7 @@ module Netzke::Basepack::DataAdapters
     end
 
     def self.adapter_class(model_class)
-      @subclasses.detect { |subclass| subclass.for_class?(model_class) } || AbstractAdapter
+      @subclasses.detect { |subclass| subclass.for_class?(model_class) } || ActiveRecordAdapter
     end
 
     def initialize(model_class)
